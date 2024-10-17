@@ -10,12 +10,23 @@ single_file_gyr = pd.read_csv("../../data/raw/MetaMotion/MetaMotion/A-bench-heav
 # --------------------------------------------------------------
 # List all data in data/raw/MetaMotion
 # --------------------------------------------------------------
-
+files = glob("../../data/raw/MetaMotion/MetaMotion/*.csv")
+len(files)
 
 # --------------------------------------------------------------
 # Extract features from filename
 # --------------------------------------------------------------
 
+
+data_path = "../../data/raw/MetaMotion/MetaMotion/"
+f = files[0]
+
+participant=f.split("-")[0].replace(data_path,"")
+
+
+
+#lable
+#category
 
 # --------------------------------------------------------------
 # Read all files
