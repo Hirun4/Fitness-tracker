@@ -1,6 +1,6 @@
 import pandas as pd
 from glob import glob
-
+import os
 # --------------------------------------------------------------
 # Read single CSV file
 # --------------------------------------------------------------
@@ -10,7 +10,7 @@ single_file_gyr = pd.read_csv("../../data/raw/MetaMotion/MetaMotion/A-bench-heav
 # --------------------------------------------------------------
 # List all data in data/raw/MetaMotion
 # --------------------------------------------------------------
-files = glob("../../data/raw/MetaMotion/MetaMotion/*.csv")
+files= glob("../../data/raw/MetaMotion/MetaMotion/*.csv")
 len(files)
 
 # --------------------------------------------------------------
@@ -22,11 +22,11 @@ data_path = "../../data/raw/MetaMotion/MetaMotion/"
 f = files[0]
 
 participant=f.split("-")[0].replace(data_path,"")
+label = f.split("-")[1]
+category =f.split("-")[2].rstrip("2")
 
 
 
-#lable
-#category
 
 # --------------------------------------------------------------
 # Read all files
