@@ -25,7 +25,11 @@ participant=f.split("-")[0].replace(data_path,"")
 label = f.split("-")[1]
 category =f.split("-")[2].rstrip("2")
 
+df = pd.read_csv(f)
 
+df("participant") = participant
+df("label") = label
+df("category") = category
 
 
 # --------------------------------------------------------------
