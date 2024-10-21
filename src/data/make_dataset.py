@@ -30,6 +30,7 @@ df = pd.read_csv(f)
 df("participant") = participant
 df("label") = label
 df("category") = category
+df("category") = category
 
 
 # --------------------------------------------------------------
